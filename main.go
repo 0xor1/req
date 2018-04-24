@@ -9,7 +9,7 @@ import (
 
 func main() {
 	if len(os.Args) < 3 {
-		fmt.Println("req usages:\nreq METHOD URL [-c COOKIE_NAME COOKIE_VALUE] [-h HEADER_NAME HEADER VALUE]\nreq GET http://example.com -c myCookie 123abc -h Authorization myUsr&Pwd")
+		fmt.Println("general usage:\nreq METHOD URL [-c COOKIE_NAME COOKIE_VALUE] [-h HEADER_NAME HEADER VALUE]\nexample usage:\nreq GET http://example.com -c myCookie 123abc -h Authorization myUsr&Pwd")
 		os.Exit(0)
 	}
 	req, e := http.NewRequest(os.Args[1], os.Args[2], nil)
